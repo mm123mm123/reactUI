@@ -1,4 +1,5 @@
 const path = require('path')
+const HtmlWebpack = require('html-webpack-plugin')
 module.exports = {
     mode: 'production',
     entry: {
@@ -16,5 +17,11 @@ module.exports = {
                 loader: 'awesome-typescript-loader'
             }
         ]
-    }
+    },
+    plugins: [
+        new HtmlWebpack({
+            title: 'RUI',
+            template: 'index.html'
+        })
+    ]
 }
