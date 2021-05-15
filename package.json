@@ -2,11 +2,12 @@
   "name": "reactUI",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/lib/rui.js",
+  "types": "dist/lib/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server --config webpack.config.dev.js",
-    "build": "webpack --config webpack.config.prod.js"
+    "start": "cross-env NODE-ENV=development webpack-dev-server --config webpack.config.dev.js",
+    "build": "cross-env NODE-ENV=production webpack --config webpack.config.prod.js"
   },
   "repository": {
     "type": "git",
