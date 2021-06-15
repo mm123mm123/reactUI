@@ -4,4 +4,7 @@ import ReactDom from 'react-dom';
 import Icon from './icon';
 
 
-ReactDom.render(<div><Icon name="success"/></div>, document.querySelector('#root'));
+const fn: React.MouseEventHandler<SVGUseElement> = (e) => {
+    console.log(e.target);
+};
+ReactDom.render(<div><Icon name="success" onClick={fn}/></div>, document.querySelector('#root'));
