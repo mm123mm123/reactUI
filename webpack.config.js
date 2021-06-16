@@ -3,7 +3,7 @@ const HtmlWebpack = require('html-webpack-plugin')
 module.exports = {
     mode: 'development',
     entry: {
-        rui: './lib/index.tsx'
+        rui: './example.tsx'
     },
     resolve: {
         extensions: ['.ts', '.tsx', '.js', '.jsx']
