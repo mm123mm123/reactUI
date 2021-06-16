@@ -6,7 +6,9 @@ const IconExample: React.FunctionComponent = () => {
     return (
         <div>
             <button onClick={() => {setVisible(!visible);}}>点击按钮</button>
-            <Dialog visible={visible}/>
+            <Dialog visible={visible}>
+                请取款
+            </Dialog>
         </div>
     );
 };
