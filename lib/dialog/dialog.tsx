@@ -46,4 +46,16 @@ const Dialog: React.FunctionComponent<dialogProps> = (props) => {
 Dialog.defaultProps = {
     isMaskCloseOnClick: false
 }
+const alert = () => {
+    const component = (
+        <Dialog visible={true} buttons={[]} closeOnClick={() => {
+            ReactDOM.render(React.cloneElement(component, {visible: false}), div)
+            ReactDOM.unmountComponentAtNode(div)
+            div.remove()
+        }}/>)
+    const div = document.createElement('div')
+    document.body.appendChild(div)
+    ReactDOM.render(component, div)
+};
+export {alert}
 export default Dialog;

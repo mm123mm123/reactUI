@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import Dialog from './dialog';
+import Dialog, {alert} from './dialog';
 
 const IconExample: React.FunctionComponent = () => {
     let [visible, setVisible] = useState(false);
@@ -8,6 +8,10 @@ const IconExample: React.FunctionComponent = () => {
             <button onClick={() => {
                 setVisible(!visible);
             }}>点击按钮
+            </button>
+            <button onClick={() => {
+                alert();
+            }}>调用alert
             </button>
             <Dialog visible={visible} buttons={[
                 <button onClick={() => setVisible(false)}>ok</button>,
