@@ -9,6 +9,7 @@
   border-radius: 6px;
   width: 20em;
   padding: 0 10px;
+  z-index: 2;
 
   &-mask {
     position: fixed;
@@ -17,6 +18,7 @@
     background: fade-out(black, 0.5);
     top: 0;
     left: 0;
+    z-index: 1;
   }
 
   &-header {
