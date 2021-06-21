@@ -1,9 +1,12 @@
-import React, {Fragment} from 'react';
+import React, {Fragment, ReactElement} from 'react';
 import Icon from '../icon/icon';
 import './dialog.scss';
 
 interface dialogProps extends React.DialogHTMLAttributes<HTMLDialogElement> {
-    visible: boolean
+    visible: boolean;
+    buttons: Array<ReactElement>;
+    closeOnClick: React.MouseEventHandler;
+    isMaskCloseOnClick: boolean
 }
 
 function scopedClassMaker(prefix: string) {
@@ -15,18 +18,22 @@ const Dialog: React.FunctionComponent<dialogProps> = (props) => {
     return (
         props.visible ?
             <Fragment>
-                <div className={scopedClass('mask')}/>
+                <div className={scopedClass('mask')}
+                     onClick={props.isMaskCloseOnClick ? props.closeOnClick : () => {
+                     }}/>
                 <div className={scopedClass('')}>
                     <header className={scopedClass('header')}>
                         <span>提示</span>
-                        <Icon name="close" className={scopedClass('icon')}/>
+                        <Icon name="close" className={scopedClass('icon')}
+                              onClick={props.closeOnClick}/>
                     </header>
                     <main className={scopedClass('main')}>
                         {props.children}
                     </main>
                     <footer className={scopedClass('footer')}>
-                        <button>ok</button>
-                        <button>cancel</button>
+                        {props.buttons.map((button, index) => {
+                            return React.cloneElement(button, {key: index})
+                        })}
                     </footer>
                 </div>
             </Fragment>
