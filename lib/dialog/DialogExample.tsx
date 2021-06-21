@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import Dialog, {alert} from './dialog';
+import Dialog, {alert, confirm, modal} from './dialog';
 
 const IconExample: React.FunctionComponent = () => {
     let [visible, setVisible] = useState(false);
@@ -10,8 +10,21 @@ const IconExample: React.FunctionComponent = () => {
             }}>点击按钮
             </button>
             <button onClick={() => {
-                alert();
+                alert('请取钱');
             }}>调用alert
+            </button>
+            <button onClick={() => {
+                confirm('请取钱', () => console.log('yes'), () => console.log('no'));
+            }}>调用confirm
+            </button>
+            <button onClick={() => {
+                const onClose = modal(
+                    <div>请取钱
+                        <button onClick={() => {
+                            onClose()
+                        }}>ok</button>
+                    </div>);
+            }}>调用modal
             </button>
             <Dialog visible={visible} buttons={[
                 <button onClick={() => setVisible(false)}>ok</button>,
@@ -21,5 +34,5 @@ const IconExample: React.FunctionComponent = () => {
             </Dialog>
         </div>
     );
-};
+}
 export default IconExample;
