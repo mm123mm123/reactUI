@@ -17,12 +17,13 @@ function scopedClassMaker(prefix: string) {
 const scopedClass = scopedClassMaker('rui-dialog');
 
 const Dialog: React.FunctionComponent<dialogProps> = (props) => {
+    const {className} = props
     const dialogHtmlString = (props.visible ?
         <Fragment>
             <div className={scopedClass('mask')}
                  onClick={props.isMaskCloseOnClick ? props.closeOnClick : () => {
                  }}/>
-            <div className={scopedClass('')}>
+            <div className={[scopedClass(''), className].join(' ')}>
                 <header className={scopedClass('header')}>
                     <span>提示</span>
                     <Icon name="close" className={scopedClass('icon')}
