@@ -10,12 +10,16 @@ interface LayoutProps extends HTMLAttributes<HTMLElement> {
 const scopedClass = scopedClassMaker('rui-layout');
 const Layout: React.FunctionComponent<LayoutProps> = (props) => {
     const {className, ...restProps} = props
-    let classes = scopedClass([], className)
-    if ((props.children as Array<ReactElement>).length) {
-        (props.children as Array<ReactElement>).map((node) => {
-            node.type === Aside && (classes=[classes, "hasAside"].join(' '))
-        })
-    }
+
+    const classes =
+        (
+            (props.children as Array<ReactElement>).length && (props.children as Array<ReactElement>).reduce(
+                (result, node) =>
+                    node.type === Aside && ([scopedClass([], className), "hasAside"].join(' ')) || result
+                , scopedClass([], className)
+            )
+        ) as string | undefined;
+
     return (
         <div className={classes} {...restProps}>
             {props.children}
