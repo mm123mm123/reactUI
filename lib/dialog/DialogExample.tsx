@@ -29,7 +29,7 @@ const IconExample: React.FunctionComponent = () => {
             <Dialog visible={visible} buttons={[
                 <button onClick={() => setVisible(false)}>ok</button>,
                 <button onClick={() => setVisible(false)}>cancel</button>]}
-                    closeOnClick={() => setVisible(false)}>
+                    closeOnClick={() => setVisible(false)} className={"nihao"}>
                 请取款
             </Dialog>
         </div>

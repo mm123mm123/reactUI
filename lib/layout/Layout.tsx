@@ -1,17 +1,14 @@
 import React, {HTMLAttributes} from "react";
+import scopedClassMaker from "../scpedClass";
 
 interface LayoutProps extends HTMLAttributes<HTMLElement> {
 }
 
-function scopedClassMaker(prefix: string) {
-    return (...suffix: string[]) => [prefix, ...suffix].filter(Boolean).join('-');
-}
-
 const scopedClass = scopedClassMaker('rui-layout');
-const Layout: React.FunctionComponent = (props: LayoutProps) => {
+const Layout: React.FunctionComponent<LayoutProps> = (props) => {
     const {className, ...restProps} = props
     return (
-        <div className={[scopedClass(), className].filter(Boolean).join(' ')} {...restProps}>
+        <div className={scopedClass([], className)} {...restProps}>
             {props.children}
         </div>
     )
