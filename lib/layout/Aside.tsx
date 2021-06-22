@@ -1,8 +1,10 @@
 import React from "react";
+import scopedClassMaker from "../scpedClass";
+const scopedClass = scopedClassMaker('rui-layout');
 
 const Aside: React.FunctionComponent = (props) => {
     return (
-        <div>
+        <div className={scopedClass(['aside'])}>
             {props.children}
         </div>
     )
