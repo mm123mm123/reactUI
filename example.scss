@@ -19,3 +19,66 @@ h1, h2, h3, h4, h5, h6 {
 ul, ol {
   list-style: none;
 }
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.webHeader {
+  > div {
+    display: flex;
+    align-items: center;
+    background-color: #eeeeee;
+    padding-left: 16px;
+
+    .logo {
+      height: 50px;
+      width: 50px;
+      margin: 6px 6px 6px 0;
+    }
+
+    div {
+      text-align: center;
+      font-weight: 400;
+      font-size: 36px;
+      color: #00ADB5;
+    }
+  }
+}
+
+.webContent {
+  background-color: #ffffff;
+
+
+  .webAside {
+    padding: 6px 16px 0 16px;
+    border-right: 1px solid #eeeeee;
+
+    h2 {
+      font-size: 20px;
+    }
+
+    ul {
+      li {
+        margin: 10px 0 0 10px;
+      }
+    }
+
+    a {
+      color: #00ADB5;
+    }
+  }
+
+  .mainContent {
+    padding-left: 15px;
+    padding-top:6px;
+  }
+}
+
+.webFooter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid #eeeeee;
+}

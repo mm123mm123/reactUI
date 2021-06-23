@@ -1,11 +1,16 @@
-import React from "react";
+import React, {HTMLAttributes} from "react";
 import scopedClassMaker from "../scopedClass";
+
+interface footerProps extends HTMLAttributes<HTMLElement> {
+}
 
 const scopedClass = scopedClassMaker('rui-layout');
 
-const Footer: React.FunctionComponent = (props) => {
+const Footer: React.FunctionComponent<footerProps> = (props) => {
+    const {className, ...restProps} = props
+
     return (
-        <div className={scopedClass(['footer'])}>
+        <div className={scopedClass(['footer'], className)} {...restProps}>
             {props.children}
         </div>
     )
