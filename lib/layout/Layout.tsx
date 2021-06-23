@@ -13,12 +13,14 @@ const Layout: React.FunctionComponent<LayoutProps> = (props) => {
 
     const classes =
         (
-            (props.children as Array<ReactElement>).length && (props.children as Array<ReactElement>).reduce(
-                (result, node) =>
-                    node.type === Aside && ([scopedClass([], className), "hasAside"].join(' ')) || result
-                , scopedClass([], className)
-            )
-        ) as string | undefined;
+            (props.children as Array<ReactElement>).length !== 0 ?
+                (props.children as Array<ReactElement>).reduce(
+                    (result, node) =>
+                        node.type === Aside && ([scopedClass([], className), "hasAside"].join(' ')) || result
+                    , scopedClass([], className)
+                ) :
+                scopedClass([], className)
+        );
 
     return (
         <div className={classes} {...restProps}>
