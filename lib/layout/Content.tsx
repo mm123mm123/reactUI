@@ -1,5 +1,5 @@
 import React from "react";
-import scopedClassMaker from "../scpedClass";
+import scopedClassMaker from "../scopedClass";
 const scopedClass = scopedClassMaker('rui-layout');
 
 const Content: React.FunctionComponent = (props) => {

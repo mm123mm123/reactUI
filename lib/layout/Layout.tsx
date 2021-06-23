@@ -1,5 +1,5 @@
 import React, {HTMLAttributes, ReactElement} from "react";
-import scopedClassMaker from "../scpedClass";
+import scopedClassMaker from "../scopedClass";
 import "./layout.scss"
 import Aside from "./Aside";
 
@@ -16,7 +16,7 @@ const Layout: React.FunctionComponent<LayoutProps> = (props) => {
             (props.children as Array<ReactElement>).length !== 0 ?
                 (props.children as Array<ReactElement>).reduce(
                     (result, node) =>
-                        node.type === Aside && ([scopedClass([], className), "hasAside"].join(' ')) || result
+                        node.type === Aside && (scopedClass([], className, "hasAside")) || result
                     , scopedClass([], className)
                 ) :
                 scopedClass([], className)

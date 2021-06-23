@@ -2,7 +2,7 @@ import React, {Fragment, ReactElement, ReactNode} from 'react';
 import Icon from '../icon/icon';
 import './dialog.scss';
 import ReactDOM from 'react-dom';
-import scopedClassMaker from "../scpedClass";
+import scopedClassMaker from "../scopedClass";
 
 interface dialogProps extends React.DialogHTMLAttributes<HTMLDialogElement> {
     visible: boolean;
