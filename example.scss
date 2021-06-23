@@ -52,27 +52,41 @@ a {
 
 
   .webAside {
-    padding: 6px 16px 0 16px;
     border-right: 1px solid #eeeeee;
 
     h2 {
       font-size: 20px;
+      padding: 10px 16px 6px 22px;
     }
 
     ul {
       li {
-        margin: 10px 0 0 10px;
+
+        a {
+          color: black;
+          display: block;
+          padding: 6px 50px 6px 36px;
+
+          span {
+            display: block;
+            width: 52px;
+          }
+
+          &.active {
+            background-color: desaturate(#00ADB5, 50%);
+            border-right: 10px solid #00ADB5;
+            color: white;
+          }
+        }
       }
     }
 
-    a {
-      color: #00ADB5;
-    }
+
   }
 
   .mainContent {
-    padding-left: 15px;
-    padding-top:6px;
+    padding-left: 66px;
+    padding-top: 6px;
   }
 }
 
