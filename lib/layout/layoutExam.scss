@@ -1,0 +1,42 @@
+li {
+  div {
+    .rui-layout {
+      width: 200px;
+
+      &-header {
+        background-color: #1890ff;
+      }
+
+      &-footer {
+        background-color: #1890ff;
+      }
+
+      &-content {
+        background-color: lighten(#1890ff, 10);
+      }
+
+      &-aside {
+        background-color: lighten(#1890ff, 20);
+      }
+
+      &-aside + .rui-layout {
+        margin-left: 4px;
+      }
+      &-header + .rui-layout{
+        margin-top: 4px;
+      }
+    }
+    .rui-layout-header + .rui-layout-content{
+      margin-top: 4px;
+    }
+    .rui-layout-content+ .rui-layout-footer{
+      margin-top: 4px;
+    }
+    .rui-layout-aside+.rui-layout-content{
+      margin-left: 4px;
+    }
+    .rui-layout-content+.rui-layout-aside{
+      margin-left: 4px;
+    }
+  }
+}

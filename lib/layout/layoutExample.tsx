@@ -4,6 +4,7 @@ import Header from "./Header";
 import Content from "./Content";
 import Footer from "./Footer";
 import Aside from "./Aside";
+import "./layoutExam.scss"
 
 const LayoutExample: React.FunctionComponent = () => {
     return (
