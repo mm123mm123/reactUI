@@ -1,4 +1,5 @@
 li {
+  list-style: none;
   div {
     .rui-layout {
       width: 200px;
@@ -13,6 +14,7 @@ li {
 
       &-content {
         background-color: lighten(#1890ff, 10);
+        height: 120px;
       }
 
       &-aside {
@@ -37,6 +39,9 @@ li {
     }
     .rui-layout-content+.rui-layout-aside{
       margin-left: 4px;
+    }
+    .rui-layout+.rui-layout-footer{
+      margin-top: 4px;
     }
   }
 }

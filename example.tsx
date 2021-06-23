@@ -5,16 +5,18 @@ import {HashRouter as Router, Route, Link} from 'react-router-dom';
 import IconExample from './lib/icon/IconExample';
 import DialogExample from './lib/dialog/DialogExample';
 import LayoutExample from "./lib/layout/layoutExample";
+import {Layout,Header,Content,Aside,Footer} from "./lib/layout/Layout";
+import './example.scss'
 
 
 ReactDom.render(
     <Router>
-        <div>
-            <header>
+        <Layout>
+            <Header>
                 <div>rui</div>
-            </header>
-            <div>
-                <aside>
+            </Header>
+            <Layout>
+                <Aside>
                     <h2>组件</h2>
                     <ul>
                         <li>
@@ -27,13 +29,16 @@ ReactDom.render(
                             <Link to="/layout">布局</Link>
                         </li>
                     </ul>
-                </aside>
-                <main>
+                </Aside>
+                <Content>
                     <Route path="/icon" component={IconExample}/>
                     <Route path="/dialog" component={DialogExample}/>
                     <Route path="/layout" component={LayoutExample}/>
-                </main>
-            </div>
-        </div>
+                </Content>
+            </Layout>
+            <Footer>
+                footer
+            </Footer>
+        </Layout>
     </Router>,
     document.querySelector('#root'));

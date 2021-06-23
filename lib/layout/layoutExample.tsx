@@ -11,6 +11,7 @@ const LayoutExample: React.FunctionComponent = () => {
         <Fragment>
             <li>
                 <div>
+                    <div>布局一</div>
                     <Layout>
                         <Header>
                             header
@@ -26,6 +27,7 @@ const LayoutExample: React.FunctionComponent = () => {
             </li>
             <li>
                 <div>
+                    <div>布局二</div>
                     <Layout>
                         <Header>
                             header
@@ -44,6 +46,7 @@ const LayoutExample: React.FunctionComponent = () => {
             </li>
             <li>
                 <div>
+                    <div>布局三</div>
                     <Layout>
                         <Header>
                             header
@@ -62,6 +65,7 @@ const LayoutExample: React.FunctionComponent = () => {
             </li>
             <li>
                 <div>
+                    <div>布局四</div>
                     <Layout>
                         <Aside>aside</Aside>
                         <Layout>

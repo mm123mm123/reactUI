@@ -1,17 +1,20 @@
-.rui-layout{
+.rui-layout {
   display: flex;
   flex-direction: column;
-  height: 160px;
-  &.hasAside{
-    flex-direction: row;
-    .rui-layout{
+
+  &.hasAside {
+    flex-direction: row !important;
+
+    .rui-layout {
       flex-direction: column;
     }
   }
-  &-content{
+
+  &-content {
     flex-grow: 1;
   }
-  & &{
+
+  & & {
     flex-grow: 1;
     flex-direction: row;
   }
