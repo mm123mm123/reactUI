@@ -1,9 +1,9 @@
-// import scopedClassMaker from "../scopedClass";
+import scopedClassMaker from "../scopedClass";
 
-// const scopedClass = scopedClassMaker('rui-layout');
+const scopedClass = scopedClassMaker('rui-layout');
 
 describe('类名处理函数测试', () => {
-    it('add(1,2)=3', () => {
-        // expect(scopedClass(1, 2)).toEqual(3);
+    it('scopedClass(1,2)=3', () => {
+        expect(scopedClass(['1'], '2','3')).toEqual('rui-layout-1 2 3');
     });
 });
