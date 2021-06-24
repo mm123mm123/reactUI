@@ -4,11 +4,9 @@ import Demo from "../../../../Demo";
 
 const LayoutEg2Demo: React.FunctionComponent = () => {
     return (
-        <div>
-            <Demo code={require('!!raw-loader!./layoutEg2.tsx')}>
-                <LayoutEg2/>
-            </Demo>
-        </div>
+        <Demo code={require('!!raw-loader!./layoutEg2.tsx')}>
+            <LayoutEg2/>
+        </Demo>
     )
 }
 export default LayoutEg2Demo
