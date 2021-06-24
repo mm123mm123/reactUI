@@ -11,28 +11,26 @@ const LayoutExample: React.FunctionComponent = () => {
         <Fragment>
             <li>
                 <div>
-                    <div>布局一</div>
                     <LayoutEg1Demo/>
+                    <div>布局一</div>
                 </div>
             </li>
             <li>
                 <div>
-                    <div>布局二</div>
                     <LayoutEg2Demo/>
+                    <div>布局二</div>
                 </div>
             </li>
             <li>
                 <div>
-                    <div>布局三</div>
                     <LayoutEg3Demo/>
-
+                    <div>布局三</div>
                 </div>
             </li>
             <li>
                 <div>
-                    <div>布局四</div>
                     <LayoutEg4Demo/>
-
+                    <div>布局四</div>
                 </div>
             </li>
         </Fragment>

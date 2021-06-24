@@ -1,46 +1,60 @@
 li {
   list-style: none;
+
   div {
     .rui-layout {
-      width: 200px;
 
       &-header {
-        background-color: #1890ff;
+        background-color: #b3c0d1;
+        text-align: center;
       }
 
       &-footer {
-        background-color: #1890ff;
+        background-color: #b3c0d1;
+        text-align: center;
       }
 
       &-content {
-        background-color: lighten(#1890ff, 10);
+        background-color: #d3dce6;
         height: 120px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
 
       &-aside {
-        background-color: lighten(#1890ff, 20);
+        background-color: #e9eef3;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
 
       &-aside + .rui-layout {
         margin-left: 4px;
       }
-      &-header + .rui-layout{
+
+      &-header + .rui-layout {
         margin-top: 4px;
       }
     }
-    .rui-layout-header + .rui-layout-content{
+
+    .rui-layout-header + .rui-layout-content {
       margin-top: 4px;
     }
-    .rui-layout-content+ .rui-layout-footer{
+
+    .rui-layout-content + .rui-layout-footer {
       margin-top: 4px;
     }
-    .rui-layout-aside+.rui-layout-content{
+
+    .rui-layout-aside + .rui-layout-content {
       margin-left: 4px;
     }
-    .rui-layout-content+.rui-layout-aside{
+
+    .rui-layout-content + .rui-layout-aside {
       margin-left: 4px;
     }
-    .rui-layout+.rui-layout-footer{
+
+    .rui-layout + .rui-layout-footer {
       margin-top: 4px;
     }
   }

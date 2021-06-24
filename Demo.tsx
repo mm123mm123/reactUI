@@ -1,4 +1,4 @@
-import React, {Fragment} from 'react';
+import React, {useState} from 'react';
 import Highlight, {defaultProps} from "prism-react-renderer";
 import "./demo.scss"
 
@@ -7,12 +7,14 @@ interface demoProp {
 }
 
 const Demo: React.FunctionComponent<demoProp> = (props) => {
+    const [codeVisible, setCodeVisible] = useState(false)
     return (
-        <Fragment>
-            <div>
+        <div className={'COMPEg'}>
+            <div className={'legendBox'}>
                 {props.children}
             </div>
-            <pre className={'codeBlock'}>
+            {codeVisible && (
+                <pre className={'codeBlock'}>
                 <Highlight {...defaultProps} code={props.code.default} language="jsx">
                     {({className, style, tokens, getLineProps, getTokenProps}) => (
                         <pre className={className} style={style}>
@@ -27,7 +29,16 @@ const Demo: React.FunctionComponent<demoProp> = (props) => {
                     )}
                 </Highlight>
             </pre>
-        </Fragment>
+            )}
+
+            <div onClick={() => {
+                setCodeVisible(!codeVisible)
+            }} className={'codeDisplayBtn'}>
+                <svg>
+                    <use xlinkHref={!codeVisible && `#downArrow` || `#upArrow`}/>
+                </svg>
+            </div>
+        </div>
     );
 };
 export default Demo;
