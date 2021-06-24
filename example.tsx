@@ -2,11 +2,11 @@ import React from 'react';
 
 import ReactDom from 'react-dom';
 import {HashRouter as Router, Route, NavLink} from 'react-router-dom';
-import IconExample from './lib/icon/IconExample';
 import DialogExample from './lib/dialog/DialogExample';
 import LayoutExample from "./lib/layout/layoutExample";
 import {Layout, Header, Content, Aside, Footer} from "./lib/layout/Layout";
 import './example.scss'
+import IconDemo from "./lib/icon/IconDemo";
 
 
 ReactDom.render(
@@ -36,7 +36,7 @@ ReactDom.render(
                     </ul>
                 </Aside>
                 <Content className={'mainContent'}>
-                    <Route path="/icon" component={IconExample}/>
+                    <Route path="/icon" component={IconDemo}/>
                     <Route path="/dialog" component={DialogExample}/>
                     <Route path="/layout" component={LayoutExample}/>
                 </Content>

@@ -4,7 +4,7 @@ import Icon from './icon';
 const IconExample: React.FunctionComponent = () => {
     return (
         <div>
-            <Icon name="weChat"></Icon>
+            <Icon name="weChat"/>
         </div>
     );
 };
