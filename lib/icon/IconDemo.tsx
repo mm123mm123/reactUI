@@ -3,7 +3,6 @@ import Demo from "../../Demo"
 import IconExample from "./IconExample";
 
 const IconDemo: React.FunctionComponent = () => {
-    console.log(typeof require('!!raw-loader!./IconExample.tsx'));
     return (
         <div>
             <Demo code={require('!!raw-loader!./IconExample.tsx')}>
