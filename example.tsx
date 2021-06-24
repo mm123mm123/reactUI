@@ -20,8 +20,16 @@ ReactDom.render(
             </Header>
             <Layout className={'webContent'}>
                 <Aside className={'webAside'}>
-                    <h2>组件</h2>
                     <ul>
+                        <li>
+                            <NavLink to="/layout"><span>RUI</span></NavLink>
+
+                        </li>
+                        <li>
+                            <NavLink to="/icon"><span>开始使用</span></NavLink>
+
+                        </li>
+                        <h2>Components</h2>
                         <li>
                             <NavLink to="/layout"><span>布局</span></NavLink>
 
