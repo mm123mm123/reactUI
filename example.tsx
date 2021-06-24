@@ -7,11 +7,13 @@ import LayoutExample from "./lib/layout/layoutExample";
 import {Layout, Header, Content, Aside, Footer} from "./lib/layout/Layout";
 import './example.scss'
 import IconDemo from "./lib/icon/IconDemo";
+import Home from "./lib/home/Home";
+import User from "./lib/user/User";
 
 
 ReactDom.render(
     <Router>
-        <Layout>
+        <Layout className={'webPage'}>
             <Header className={'webHeader'}>
                 <div>
                     <img src="logo.png" className={'logo'}/>
@@ -22,11 +24,11 @@ ReactDom.render(
                 <Aside className={'webAside'}>
                     <ul>
                         <li>
-                            <NavLink to="/layout"><span>RUI</span></NavLink>
+                            <NavLink to="/home"><span>RUI</span></NavLink>
 
                         </li>
                         <li>
-                            <NavLink to="/icon"><span>开始使用</span></NavLink>
+                            <NavLink to="/user"><span>开始使用</span></NavLink>
                         </li>
                         <li>
                             <h2>Components</h2>
@@ -47,6 +49,8 @@ ReactDom.render(
                     </ul>
                 </Aside>
                 <Content className={'mainContent'}>
+                    <Route path="/home" component={Home}/>
+                    <Route path="/user" component={User}/>
                     <Route path="/icon" component={IconDemo}/>
                     <Route path="/dialog" component={DialogExample}/>
                     <Route path="/layout" component={LayoutExample}/>

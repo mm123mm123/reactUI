@@ -1,0 +1,17 @@
+.homePage {
+  ul {
+    li {
+
+      h1 {
+        font-size: 28px;
+      }
+
+      h1 + div {
+        margin-top: 10px;
+      }
+    }
+    li+li{
+      margin-top: 60px;
+    }
+  }
+}

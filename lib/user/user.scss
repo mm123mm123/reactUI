@@ -1,0 +1,15 @@
+.usePage {
+  h1 + div {
+    margin-top: 20px;
+  }
+
+  .useTip {
+    color: #595959bf;
+  }
+  .commandTip{
+    margin-top: 26px;
+    div+div{
+      margin-top: 10px;
+    }
+  }
+}
