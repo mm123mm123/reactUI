@@ -27,19 +27,22 @@ ReactDom.render(
                         </li>
                         <li>
                             <NavLink to="/icon"><span>开始使用</span></NavLink>
-
-                        </li>
-                        <h2>Components</h2>
-                        <li>
-                            <NavLink to="/layout"><span>布局</span></NavLink>
-
                         </li>
                         <li>
-                            <NavLink to="/icon"><span>图标</span></NavLink>
+                            <h2>Components</h2>
+                            <ul>
+                                <li>
+                                    <NavLink to="/layout"><span>布局</span></NavLink>
 
-                        </li>
-                        <li>
-                            <NavLink to="/dialog"><span>提示框</span></NavLink>
+                                </li>
+                                <li>
+                                    <NavLink to="/icon"><span>图标</span></NavLink>
+
+                                </li>
+                                <li>
+                                    <NavLink to="/dialog"><span>提示框</span></NavLink>
+                                </li>
+                            </ul>
                         </li>
                     </ul>
                 </Aside>

@@ -26,7 +26,7 @@ a {
 }
 
 .webHeader {
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   z-index: 1;
 
   > div {
@@ -57,28 +57,40 @@ a {
   .webAside {
     border-right: 1px solid #eeeeee;
 
-    h2 {
-      font-size: 18px;
-      padding: 10px 16px 6px 22px;
-    }
-
     ul {
-      li {
+      font-size: 16px;
+      font-weight: 600;
+      > li {
+        h2 {
+          padding: 10px 150px 10px 30px;
+          font-size: 16px;
+          font-weight: 600;
+        }
 
         a {
           color: black;
           display: block;
-          padding: 6px 150px 6px 36px;
+          padding: 10px 150px 10px 30px;
 
           span {
             display: block;
-            width: 52px;
+            width: 66px;
           }
 
           &.active {
             background-color: desaturate(#00ADB5, 50%);
             border-right: 10px solid #00ADB5;
             color: white;
+          }
+        }
+
+        > ul {
+          li {
+            a {
+              padding: 10px 150px 10px 60px;
+              font-size: 14px;
+              font-weight: 400;
+            }
           }
         }
       }
