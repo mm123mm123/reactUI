@@ -1,10 +1,10 @@
 import React, {Fragment} from 'react';
-import Layout from "./Layout";
-import Header from "./Header";
-import Content from "./Content";
-import Footer from "./Footer";
-import Aside from "./Aside";
 import "./layoutExam.scss"
+import LayoutEg1Demo from "./layoutEaxmple/layoutEg1/layoutEg1Demo";
+import LayoutEg2Demo from "./layoutEaxmple/layoutEg2/layoutEg2Demo";
+import LayoutEg3Demo from "./layoutEaxmple/layoutEg3/layoutEg3Demo";
+import LayoutEg4Demo from "./layoutEaxmple/layoutEg4/layoutEg4Demo";
+
 
 const LayoutExample: React.FunctionComponent = () => {
     return (
@@ -12,74 +12,27 @@ const LayoutExample: React.FunctionComponent = () => {
             <li>
                 <div>
                     <div>布局一</div>
-                    <Layout>
-                        <Header>
-                            header
-                        </Header>
-                        <Content>
-                            content
-                        </Content>
-                        <Footer>
-                            footer
-                        </Footer>
-                    </Layout>
+                    <LayoutEg1Demo/>
                 </div>
             </li>
             <li>
                 <div>
                     <div>布局二</div>
-                    <Layout>
-                        <Header>
-                            header
-                        </Header>
-                        <Layout>
-                            <Aside>aside</Aside>
-                            <Content>
-                                content
-                            </Content>
-                        </Layout>
-                        <Footer>
-                            footer
-                        </Footer>
-                    </Layout>
+                    <LayoutEg2Demo/>
                 </div>
             </li>
             <li>
                 <div>
                     <div>布局三</div>
-                    <Layout>
-                        <Header>
-                            header
-                        </Header>
-                        <Layout>
-                            <Content>
-                                content
-                            </Content>
-                            <Aside>aside</Aside>
-                        </Layout>
-                        <Footer>
-                            footer
-                        </Footer>
-                    </Layout>
+                    <LayoutEg3Demo/>
+
                 </div>
             </li>
             <li>
                 <div>
                     <div>布局四</div>
-                    <Layout>
-                        <Aside>aside</Aside>
-                        <Layout>
-                            <Header>
-                                header
-                            </Header>
-                            <Content>
-                                content
-                            </Content>
-                            <Footer>
-                                footer
-                            </Footer>
-                        </Layout>
-                    </Layout>
+                    <LayoutEg4Demo/>
+
                 </div>
             </li>
         </Fragment>
