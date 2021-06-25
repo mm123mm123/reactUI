@@ -12,7 +12,7 @@ const DialogEg1: React.FunctionComponent = () => {
             <Dialog visible={visible} buttons={[
                 <button onClick={() => setVisible(false)}>ok</button>,
                 <button onClick={() => setVisible(false)}>cancel</button>]}
-                    closeOnClick={() => setVisible(false)}>
+                    closeOnClick={() => setVisible(false)} isMaskCloseOnClick={true}>
                 自定义文本
             </Dialog>
         </div>

@@ -72,7 +72,7 @@ const modal = (content: ReactNode, buttons?: Array<ReactElement>, closeOnClick?:
                 closeOnClick={() => {
                     onClose()
                     closeOnClick && closeOnClick()
-                }}>
+                }} isMaskCloseOnClick={true}>
             {content}
         </Dialog>)
     const div = document.createElement('div')

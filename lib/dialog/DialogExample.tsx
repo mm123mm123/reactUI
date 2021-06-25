@@ -7,7 +7,7 @@ import './dialogEg.scss'
 const IconExample: React.FunctionComponent = () => {
     return (
         <div className={'dialogEgBox'}>
-            <h2>Dialog提示框</h2>
+            <h2>Dialog 提示框</h2>
             <div className={'textTip'}>通过弹框对用户进行提示，通知</div>
             <h3>基本用法</h3>
             <DialogEg1Demo/>
