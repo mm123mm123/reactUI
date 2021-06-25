@@ -12,7 +12,7 @@ const LayoutExample: React.FunctionComponent = () => {
             <div className={'layoutIntro'}>
                 <h2>Layout 布局容器</h2>
                 <ul className={'tagUseTip'}>
-                    <li><span>{"<Layout>"}</span>：外层布局标签，包含Header或者Footer时，全部子元素会垂直上下排列，否则会水平左右排列</li>
+                    <li><span>{"<Layout>"}</span>：外层布局标签，包含Aside标签时，全部子元素会水平左右排列，否则会垂直上下排列</li>
                     <li><span>{"<Header>"}</span>：顶部内容区域标签</li>
                     <li><span>{"<Content>"}</span>：主要内容区域标签</li>
                     <li><span>{"<Footer>"}</span>：底部内容区域标签</li>
