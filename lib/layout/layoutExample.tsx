@@ -40,7 +40,7 @@ const LayoutExample: React.FunctionComponent = () => {
                 </li>
                 <li>
                     <div>
-                        <div>布局四</div>
+                        <div className={'layoutTitle'}>布局四</div>
                         <LayoutEg4Demo/>
                     </div>
                 </li>

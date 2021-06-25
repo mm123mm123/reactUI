@@ -37,6 +37,7 @@ const Demo: React.FunctionComponent<demoProp> = (props) => {
                 <svg>
                     <use xlinkHref={!codeVisible && `#downArrow` || `#upArrow`}/>
                 </svg>
+                <span>{!codeVisible && `查看代码` || `隐藏代码`}</span>
             </div>
         </div>
     );

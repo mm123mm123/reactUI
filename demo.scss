@@ -24,10 +24,25 @@
     display: flex;
     justify-content: center;
     border-top: 1px solid #eeeeee;
+    align-items: center;
 
     svg {
-      height: 20px;
-      width: 20px;
+      height: 10px;
+      width: 10px;
+    }
+
+    span {
+      font-size: 10px;
+      margin-left: 6px;
+      color: darken(#eeeeee, 20%);
+
+      &:hover {
+        color: #00ADB5 !important;
+      }
+    }
+
+    &:hover {
+      cursor: pointer;
     }
   }
 }

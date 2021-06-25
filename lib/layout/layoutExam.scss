@@ -1,5 +1,7 @@
 
 .layoutIntro {
+  padding-left: 60px;
+
   h2 {
     margin-bottom: 16px;
   }
@@ -26,62 +28,77 @@
 
 .layoutEgList {
   margin-bottom: 30px;
-}
 
-li {
-  list-style: none;
+  li {
+    list-style: none;
 
-  div {
-    .COMPEg {
-      width: 70%;
+    .layoutTitle {
+      font-size: 18px;
+      margin: 10px 0;
     }
 
-    .rui-layout {
-      &-header {
-        background-color: #b3c0d1;
+    > div {
+      width: 90%;
+      padding: 20px 60px;
+
+      .COMPEg {
+        width: 80%;
       }
 
-      &-footer {
-        background-color: #b3c0d1;
+      .rui-layout {
+        &-header {
+          background-color: #b3c0d1;
+          text-align: center;
+        }
+
+        &-footer {
+          background-color: #b3c0d1;
+          text-align: center;
+        }
+
+        &-content {
+          background-color: #d3dce6;
+          height: 120px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        &-aside {
+          background-color: #e9eef3;
+          display: flex;
+          align-items: center;
+        }
+
+        &-aside + .rui-layout {
+          margin-left: 4px;
+        }
+
+        &-header + .rui-layout {
+          margin-top: 4px;
+        }
       }
 
-      &-content {
-        background-color: #d3dce6;
-        height: 120px;
-
+      .rui-layout-header + .rui-layout-content {
+        margin-top: 4px;
       }
 
-      &-aside {
-        background-color: #e9eef3;
+      .rui-layout-content + .rui-layout-footer {
+        margin-top: 4px;
       }
 
-      &-aside + .rui-layout {
+      .rui-layout-aside + .rui-layout-content {
         margin-left: 4px;
       }
 
-      &-header + .rui-layout {
+      .rui-layout-content + .rui-layout-aside {
+        margin-left: 4px;
+      }
+
+      .rui-layout + .rui-layout-footer {
         margin-top: 4px;
       }
     }
-
-    .rui-layout-header + .rui-layout-content {
-      margin-top: 4px;
-    }
-
-    .rui-layout-content + .rui-layout-footer {
-      margin-top: 4px;
-    }
-
-    .rui-layout-aside + .rui-layout-content {
-      margin-left: 4px;
-    }
-
-    .rui-layout-content + .rui-layout-aside {
-      margin-left: 4px;
-    }
-
-    .rui-layout + .rui-layout-footer {
-      margin-top: 4px;
-    }
   }
 }
+
