@@ -1,37 +1,31 @@
-import React, {useState} from 'react';
-import Dialog, {alert, confirm, modal} from './dialog';
+import React from 'react';
+import DialogEg1Demo from "./dialogEg/dialogEg1/dialogEg1Demo";
+import DialogEg2Demo from "./dialogEg/dialogEg2/dialogEg2Demo";
+import DialogEg3Demo from "./dialogEg/dialogEg3/dialogEg3Demo";
+import './dialogEg.scss'
 
 const IconExample: React.FunctionComponent = () => {
-    let [visible, setVisible] = useState(false);
     return (
-        <div>
-            <button onClick={() => {
-                setVisible(!visible);
-            }}>点击按钮
-            </button>
-            <button onClick={() => {
-                alert('请取钱');
-            }}>调用alert
-            </button>
-            <button onClick={() => {
-                confirm('请取钱', () => console.log('yes'), () => console.log('no'));
-            }}>调用confirm
-            </button>
-            <button onClick={() => {
-                const onClose = modal(
-                    <div>请取钱
-                        <button onClick={() => {
-                            onClose()
-                        }}>ok</button>
-                    </div>);
-            }}>调用modal
-            </button>
-            <Dialog visible={visible} buttons={[
-                <button onClick={() => setVisible(false)}>ok</button>,
-                <button onClick={() => setVisible(false)}>cancel</button>]}
-                    closeOnClick={() => setVisible(false)} className={"nihao"}>
-                请取款
-            </Dialog>
+        <div className={'dialogEgBox'}>
+            <h2>Dialog提示框</h2>
+            <div className={'textTip'}>通过弹框对用户进行提示，通知</div>
+            <h3>基本用法</h3>
+            <DialogEg1Demo/>
+            <h3>方法调用</h3>
+            <div className={'textTip'}>
+                <span className={'methodName'}>alert方法</span>
+                ：接受一个参数，该参数可以定义提示内容
+            </div>
+            <div className={'textTip'}>
+                <span className={'methodName'}>
+                    confirm方法
+               </span>：
+                <span className={'methodTip'}>
+                    接受三个参数，第一个定义提示内容，第二个定义点击按钮ok所要执行的事件，第三个定义点击按钮cancel所要执行的事件
+                </span>
+            </div>
+            <DialogEg2Demo/>
+            <DialogEg3Demo/>
         </div>
     );
 }
