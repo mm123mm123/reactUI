@@ -10,13 +10,16 @@ import IconDemo from "./lib/icon/IconDemo";
 import Home from "./lib/home/Home";
 import User from "./lib/user/User";
 
+const logo = require('./logo.png')
+console.log(logo);
+
 
 ReactDom.render(
     <Router>
         <Layout className={'webPage'}>
             <Header className={'webHeader'}>
                 <div>
-                    <img src="logo.png" className={'logo'}/>
+                    <img src={logo.default} className={'logo'}/>
                     <div>RUI</div>
                 </div>
             </Header>
