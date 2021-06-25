@@ -16,7 +16,7 @@ const Home: React.FunctionComponent = () => {
                 </li>
                 <li>
                     <h1>没有额外依赖</h1>
-                    <div>RUI只依赖 React、ReactDOM 两个核心库以及 PropTypes 进行类型检查，没有其他外部依赖。
+                    <div>RUI只依赖 React、ReactDOM 两个核心库，没有其他外部依赖。
                     </div>
                 </li>
             </ul>

@@ -8,7 +8,6 @@ import {Layout, Header, Content, Aside, Footer} from "./lib/layout/Layout";
 import './example.scss'
 import IconDemo from "./lib/icon/IconDemo";
 import Home from "./lib/home/Home";
-import User from "./lib/user/User";
 
 const logo = require('./logo.png')
 console.log(logo);
@@ -30,9 +29,6 @@ ReactDom.render(
                             <NavLink exact to="/"><span>RUI</span></NavLink>
                         </li>
                         <li>
-                            <NavLink to="/user"><span>开始使用</span></NavLink>
-                        </li>
-                        <li>
                             <h2>Components</h2>
                             <ul>
                                 <li>
@@ -52,7 +48,6 @@ ReactDom.render(
                 </Aside>
                 <Content className={'mainContent'}>
                     <Route exact path="/" component={Home}/>
-                    <Route path="/user" component={User}/>
                     <Route path="/icon" component={IconDemo}/>
                     <Route path="/dialog" component={DialogExample}/>
                     <Route path="/layout" component={LayoutExample}/>
