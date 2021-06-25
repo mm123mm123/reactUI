@@ -24,8 +24,7 @@ ReactDom.render(
                 <Aside className={'webAside'}>
                     <ul>
                         <li>
-                            <NavLink to="/home"><span>RUI</span></NavLink>
-
+                            <NavLink exact to="/"><span>RUI</span></NavLink>
                         </li>
                         <li>
                             <NavLink to="/user"><span>开始使用</span></NavLink>
@@ -49,7 +48,7 @@ ReactDom.render(
                     </ul>
                 </Aside>
                 <Content className={'mainContent'}>
-                    <Route path="/home" component={Home}/>
+                    <Route exact path="/" component={Home}/>
                     <Route path="/user" component={User}/>
                     <Route path="/icon" component={IconDemo}/>
                     <Route path="/dialog" component={DialogExample}/>
